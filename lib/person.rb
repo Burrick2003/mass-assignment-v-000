@@ -5,7 +5,7 @@ attr_accessor :name, :birthday, :hair_color, :eye_color, :height, :weight, :hand
   end
   def initialize(attributes) #dissected
     attributes.each do |key, value|
-      self.send(("#{key}="), value)
+      self.send(("#{key}="), value) #for each key/value pair in the input hash, sets @birthday/self.birthday = value
     end
   end
 
