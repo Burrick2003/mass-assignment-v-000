@@ -1,9 +1,9 @@
 class Person
 attr_accessor :name, :birthday, :hair_color, :eye_color, :height, :weight, :handed, :complexion, :t_shirt_size, :wrist_size, :glove_size, :pant_length, :pant_width
-  def initialize3(attributes)
+  def initialize3(attributes) #from the lesson
     attributes.each {|key, value| self.send(("#{key}="), value)}
   end
-  def initialize(attributes)
+  def initialize(attributes) #dissected
     attributes.each do |key, value|
       self.send(("#{key}="), value)
     end
